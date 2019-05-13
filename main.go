@@ -113,9 +113,6 @@ func Insert(w http.ResponseWriter, r *http.Request) {
 		alamat := r.FormValue("alamat")
 		telp := r.FormValue("telp")
 		insForm, err := db.Prepare("INSERT INTO kontak (nama, alamat, telp) VALUES ($1,$2,$3)")
-		log.Println("==========")
-		log.Println(err)
-		log.Println(telp)
 		if err != nil {
 			panic(err.Error())
 		}
