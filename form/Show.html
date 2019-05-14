@@ -1,9 +1,18 @@
 {{ define "Show" }}
-  {{ template "Header" }}
-    {{ template "Menu"  }}
-    <h2> Register {{ .Id }} </h2>
-      <p>Nama: {{ .Nama }}</p>
-      <p>Alamat:  {{ .Alamat }}</p>
-       <p>No. Telepon: {{ .Telp }}</p> <br /> <a href="/edit?id={{ .Id }}">Edit</a></p>
-  {{ template "Footer" }}
+{{ template "Header" }}
+{{ template "Menu"  }}
+<form action="">
+  <div class="content has-text-left">
+    <div class="container">
+      <div class="notification">
+        <h4><strong>ID: {{ .Id }}</strong> </h4>
+        <p><strong>Nama: {{ .Nama }}</strong></p>
+        <p><strong>Alamat: {{ .Alamat }}</strong></p>
+        <p><strong>No. Telepon: {{ .Telp }}</strong></p>
+      </div>
+    </div>
+  </div>
+  <a class="button is-warning" href="/edit?id={{ .Id }}">Edit</a></p>
+</form>
+{{ template "Footer" }}
 {{ end }}

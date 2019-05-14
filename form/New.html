@@ -1,12 +1,27 @@
 {{ define "New" }}
-  {{ template "Header" }}
-    {{ template "Menu" }} 
-   <h2>New Name and City</h2>  
-    <form method="POST" action="insert">
-      <label> Nama </label><input type="text" name="nama" /><br />
-      <label> Alamat </label><input type="text" name="alamat" /><br />
-      <label> No. Telepon </label><input type="text" name="telp" /><br />
-      <input type="submit" value="Save user" />
-    </form>
-  {{ template "Footer" }}
+{{ template "Header" }}
+{{ template "Menu" }}
+<form class="control" method="POST" action="insert">
+  <h2><strong>Buat Kontak Baru :</strong></h2><br />
+  <div class="field">
+    <label class="label">Nama</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Nama" name="nama" cols="70" rows="4" required>
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Alamat</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Alamat" name="alamat">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">No. Telepon</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="No. Telepon" name="telp">
+    </div>
+  </div>
+  <input class="button is-link" type="submit" value="Simpan" />
+</form>
+{{ template "Footer" }}
 {{ end }}

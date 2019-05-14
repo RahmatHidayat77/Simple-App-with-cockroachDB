@@ -1,13 +1,28 @@
 {{ define "Edit" }}
-  {{ template "Header" }}
-    {{ template "Menu" }} 
-   <h2>Edit Name and City</h2>  
-    <form method="POST" action="update">
-      <input type="hidden" name="uid" value="{{ .Id }}" />
-      <label> Nama </label><input type="text" name="nama" value="{{ .Nama }}"  /><br />
-      <label> Alamat </label><input type="text" name="alamat" value="{{ .Alamat }}"  /><br />
-      <label> No. Telepon </label><input type="text" name="telp" value="{{ .Telp }}"  /><br />
-      <input type="submit" value="Save user" />
-    </form><br />    
-  {{ template "Footer" }}
+{{ template "Header" }}
+{{ template "Menu" }}
+<form method="POST" action="update">
+  <h2><strong>Edit Kontak :</strong></h2><br>
+  <input type="hidden" name="uid" value="{{ .Id }}" />
+  <div class="field">
+    <label class="label">Nama</label>
+    <div class="control">
+      <input class="input" type="text" name="nama" value="{{ .Nama }}">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Alamat</label>
+    <div class="control">
+      <input class="input" type="text" name="alamat" value="{{ .Alamat }}">
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">No. Telepon</label>
+    <div class="control">
+      <input class="input" type="text" name="telp" value="{{ .Telp }}">
+    </div>
+  </div>
+  <input class="button is-link" type="submit" value="Simpan" />
+</form><br />
+{{ template "Footer" }}
 {{ end }}
