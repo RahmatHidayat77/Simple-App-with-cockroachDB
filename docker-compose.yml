@@ -5,13 +5,13 @@ services:
   volumes: 
     - ./SQL/kontak.sql :/docker-entrypoint-initdb.d/
   ports: 
-   - "8080:8080"
+  #  - "8080:8080"
    - "2657:2657"
   tty: true
  app:
   build: 
    context: ./
-   container_name: golang_app
+  #  container_name: golang_app
   ports: 
    - "8000:8888"
   depends_on:
