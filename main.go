@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"log"
 	"net/http"
+	"os"
 	"text/template"
 
 	_ "github.com/lib/pq"
@@ -17,10 +18,13 @@ type kontak struct {
 }
 
 func dbConn() (db *sql.DB) {
+	if len(os.Getenv("ROACH_HOST")) == 0 {
+		os.Setenv("ROACH_HOST", "localhost")
+	}
 	// dbDriver := "postgres"
 	dbUser := "root"
 	dbName := "kontak_db"
-	db, err := sql.Open("postgres", "postgresql://"+dbUser+"@localhost:26257/"+dbName+"?sslmode=disable")
+	db, err := sql.Open("postgres", "postgresql://"+dbUser+"@"+os.Getenv("ROACH_HOST")+":26257/"+dbName+"?sslmode=disable")
 	if err != nil {
 		panic(err.Error())
 	}
