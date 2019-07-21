@@ -11,3 +11,30 @@ Clone repo to your GOPATH directory :
 ```
 git clone git@github.com:RahmatHidayat77/Simple-App-with-cockroachDB.git
 ```
+
+## How to run
+### Set up database
+Start cockroach sql command line :
+```
+cockroach sql --insecure
+```
+
+Then excecute code on SQL/kontak.sql to cockroach sql command line.
+
+### Run cockroach
+Run cockroach on insecure mode :
+```
+cockroach start --insecure
+```
+
+### Run golang app
+Go to app directory, then run golang app :
+```
+go run main.go
+```
+
+### Open app on browser
+Open your browser, then access :
+```
+localhost:8010
+```
