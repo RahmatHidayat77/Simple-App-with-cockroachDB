@@ -13,19 +13,18 @@ git clone git@github.com:RahmatHidayat77/Simple-App-with-cockroachDB.git
 ```
 
 ## How to run
-### Set up database
-Start cockroach sql command line :
-```
-cockroach sql --insecure
-```
-
-Then excecute code on __SQL/kontak.sql__ to cockroach sql command line.
-
 ### Run cockroach
 Run cockroach on insecure mode :
 ```
 cockroach start --insecure
 ```
+
+### Set up database
+Start cockroach sql command line :
+```
+cockroach sql --insecure
+```
+Then excecute code on __SQL/kontak.sql__ to cockroach sql command line.
 
 ### Run golang app
 Go to app directory, then run golang app :
