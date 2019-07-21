@@ -79,5 +79,7 @@ Then access : [localhost:8010](http:localhost:8010).
 Done.
 
 Contributor
-@RahmatHidayat77 Rahmat Hidayat 165410020
-@arifplankton Arif Wibowo 175410179
+
+[@RahmatHidayat77](https://github.com/RahmatHidayat77) Rahmat Hidayat 165410020
+
+[@arifplankton](https://github.com/arifplankton) Arif Wibowo 175410179
