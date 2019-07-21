@@ -77,3 +77,7 @@ docker run -d --name=go-app -p 8010:8010 --env ROACH_HOST=$ROACH_IP_ADDRESS go-a
 Then access : [localhost:8010](http:localhost:8010).
 
 Done.
+
+Contributor
+@RahmatHidayat77 Rahmat Hidayat 165410020
+@arifplankton Arif Wibowo 175410179
