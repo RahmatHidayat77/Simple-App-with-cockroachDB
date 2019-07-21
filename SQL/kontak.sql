@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS kontak_db;
+
 create database kontak_db;
 
 set database=kontak_db;

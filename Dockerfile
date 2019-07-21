@@ -24,10 +24,10 @@ RUN go get -d -v ./...
 RUN apk del git
 
 # Build app
-RUN go build -o ./number_contact_golang
+RUN go build -o ./go_app
 
 # Run the app
-CMD ["./number_contact_golang"]
+CMD ["./go_app"]
 
 # Expose port
-EXPOSE 8888
+EXPOSE 8010
