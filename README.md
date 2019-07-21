@@ -34,6 +34,46 @@ go run main.go
 
 ### Open app on browser
 Open your browser, then access :
+[localhost:8010](localhost:8080)
+
+## Dockerize App
+First, make sure you on app directory (__Simple-App-with-cockroachDB__).
+Build docker image from app :
 ```
-localhost:8010
+docker build -t go-app:0.1 .
 ```
+
+Pull cockroach image from dockerhub :
+```
+docker pull cockroachdb/cockroach
+```
+
+Create and run cockroachdb container :
+```
+docker run -d --name=roach -p 26257:26257 -p 8080:8080 cockroachdb/cockroach start --insecure
+```
+
+To access cockroachDB container we must know cockroachDB IP address.
+So, save cockroachDB IP address into variabel to run app container later :
+```
+ROACH_IP_ADDRESS=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' roach)
+```
+You can echo IP address like this :
+```
+echo $ROACH_IP_ADDRESS
+```
+
+Access cockroachDB container to excecute sql command :
+```
+docker exec -it roach ./cockroach sql --insecure
+```
+Execute code on __SQL/kontak.sql__ to cockroach sql command line.
+
+Create and running go-app :
+```
+docker run -d --name=go-app -p 8010:8010 --env ROACH_HOST=$ROACH_IP_ADDRESS go-app:0.1
+```
+
+Then access : [localhost:8010](localhost:8080).
+
+Done.
