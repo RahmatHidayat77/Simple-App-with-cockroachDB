@@ -34,7 +34,7 @@ go run main.go
 
 ### Open app on browser
 Open your browser, then access :
-[localhost:8010](localhost:8080)
+[localhost:8010](http:localhost:8080)
 
 ## Dockerize App
 First, make sure you on app directory (__Simple-App-with-cockroachDB__).
@@ -74,6 +74,6 @@ Create and running go-app :
 docker run -d --name=go-app -p 8010:8010 --env ROACH_HOST=$ROACH_IP_ADDRESS go-app:0.1
 ```
 
-Then access : [localhost:8010](localhost:8080).
+Then access : [localhost:8010](http:localhost:8080).
 
 Done.
