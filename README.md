@@ -19,7 +19,7 @@ Start cockroach sql command line :
 cockroach sql --insecure
 ```
 
-Then excecute code on SQL/kontak.sql to cockroach sql command line.
+Then excecute code on __SQL/kontak.sql__ to cockroach sql command line.
 
 ### Run cockroach
 Run cockroach on insecure mode :
